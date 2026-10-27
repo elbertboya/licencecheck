@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "elbertboya-licencecheck"
+version = "0.1.0"
+description = "核对每个数据源的使用许可与引用格式，标出缺失或超范围使用"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { file = "LICENSE" }
+authors = [{ name = "elbertboya" }]
+keywords = ["cli", "analysis", "observability", "evaluation"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Topic :: Utilities",
+]
+
+[project.urls]
+Homepage = "https://elbertboya.github.io"
+Repository = "https://github.com/elbertboya/licencecheck"
+Issues = "https://github.com/elbertboya/licencecheck/issues"
+
+[project.scripts]
+licencecheck = "licencecheck:main"
+
+[tool.setuptools]
+py-modules = ["licencecheck"]
